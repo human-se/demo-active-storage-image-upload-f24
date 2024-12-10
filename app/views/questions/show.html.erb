@@ -1,5 +1,11 @@
 <h1><%= @question.question %></h1>
 
+<% if @question.figure_image.attached? %>
+  <div class="my-4">
+    <%= image_tag @question.figure_image, class: 'w-100 d-block mx-auto', style: 'max-width: 32rem;' %>
+  </div>
+<% end %>
+
 <ul>
   <li class="text-success">
     <%= @question.answer %>

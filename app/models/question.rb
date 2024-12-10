@@ -22,6 +22,8 @@
 #  fk_rails_...  (quiz_id => quizzes.id)
 #
 class Question < ApplicationRecord
+  has_one_attached :figure_image
+
   belongs_to(
     :quiz,
     class_name: 'Quiz',

@@ -2,6 +2,7 @@
 
 <%= bootstrap_form_with model: @question, method: :patch, url: quiz_question_path(@quiz, @question), local: true do |f| %>
   <%= f.text_field :question %>
+  <%= f.file_field :figure_image %>
   <%= f.text_field :answer %>
   <%= f.text_field :distractor_1 %>
   <%= f.text_field :distractor_2 %>
